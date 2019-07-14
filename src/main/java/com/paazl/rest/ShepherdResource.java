@@ -11,7 +11,7 @@ import java.math.BigInteger;
 @Path("/shepherdmanager")
 @Service
 public class ShepherdResource {
-    ShepherdService service;
+    private ShepherdService service;
 
     @Autowired
     public ShepherdResource(ShepherdService service) {
@@ -22,9 +22,5 @@ public class ShepherdResource {
     @Path("/balance")
     public BigInteger getBalance() {
         return service.getBalance();
-    }
-
-    public void orderSheep(int numberOfSheepDesired) {
-        service.orderNewSheep(numberOfSheepDesired);
     }
 }

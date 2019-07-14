@@ -1,5 +1,6 @@
 package com.paazl.configuration;
 
+import com.paazl.rest.SheepResource;
 import com.paazl.rest.ShepherdResource;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.stereotype.Component;
@@ -12,5 +13,6 @@ public class JerseyConfig extends ResourceConfig {
 
     public JerseyConfig() {
         register(ShepherdResource.class);
+        register(SheepResource.class);
     }
 }
